@@ -21,4 +21,9 @@ platform :ios do
     # add actions here: https://docs.fastlane.tools/actions
     puts("check for build Fastlane app")
   end
+deliver(
+      skip_screenshots: true, #Don't upload the screenshots
+      skip_binary_upload: true, #Skip uploading an ipa to iTunes Connect
+      force: true #Skip the HTML report file verification
+    )
 end
